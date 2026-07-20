@@ -1,4 +1,4 @@
-import {
+const {
   addScore,
   changeDirection,
   createFood,
@@ -6,7 +6,7 @@ import {
   getGameOverReason,
   isSamePosition,
   moveSnake,
-} from './game-logic.mjs';
+} = globalThis.SnakeGameLogic;
 
 const BOARD_SIZE = 20;
 const CELL_SIZE = 20;

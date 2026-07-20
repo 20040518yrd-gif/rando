@@ -1,12 +1,11 @@
 import assert from 'node:assert/strict';
+import { createRequire } from 'node:module';
 import test from 'node:test';
 
-async function loadGameLogic() {
-  try {
-    return await import('../game-logic.mjs');
-  } catch {
-    return {};
-  }
+const require = createRequire(import.meta.url);
+
+function loadGameLogic() {
+  return require('../game-logic.js');
 }
 
 test('初始状态包含一条向右移动的三格蛇', async () => {
