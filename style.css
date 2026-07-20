@@ -1,0 +1,157 @@
+:root {
+  color: #ecfdf5;
+  background: #071a16;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  min-height: 100vh;
+  margin: 0;
+  place-items: center;
+  padding: 24px;
+}
+
+.game-card {
+  width: min(100%, 480px);
+  border: 1px solid #2a5d51;
+  border-radius: 20px;
+  background: #0d2922;
+  box-shadow: 0 24px 60px rgb(0 0 0 / 35%);
+  padding: 24px;
+}
+
+.game-header,
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.eyebrow {
+  margin: 0 0 4px;
+  color: #86efac;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(24px, 7vw, 32px);
+}
+
+.score {
+  margin: 0;
+  color: #bbf7d0;
+  font-weight: 700;
+}
+
+#score {
+  color: #fef08a;
+  font-size: 24px;
+}
+
+#game-board {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 22px 0;
+  border: 1px solid #35685d;
+  border-radius: 10px;
+  background: #061310;
+}
+
+button {
+  flex: none;
+  border: 0;
+  border-radius: 10px;
+  background: #4ade80;
+  color: #052e16;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+  padding: 11px 16px;
+}
+
+button:hover {
+  background: #86efac;
+}
+
+#status {
+  margin: 0;
+  color: #a7c9bc;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.game-over-dialog {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgb(2 12 9 / 78%);
+}
+
+.game-over-dialog[hidden] {
+  display: none;
+}
+
+.dialog-card {
+  width: min(100%, 360px);
+  border: 1px solid #fb7185;
+  border-radius: 20px;
+  background: #1d1518;
+  box-shadow: 0 24px 70px rgb(0 0 0 / 45%);
+  padding: 32px;
+  text-align: center;
+}
+
+.dialog-eyebrow {
+  margin: 0 0 8px;
+  color: #fda4af;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.dialog-card h2 {
+  margin: 0;
+  color: #fff1f2;
+  font-size: 32px;
+}
+
+.game-over-reason {
+  margin: 12px 0;
+  color: #fecdd3;
+  font-size: 18px;
+}
+
+.final-score {
+  margin: 0 0 24px;
+  color: #ffe4e6;
+}
+
+#final-score {
+  color: #fef08a;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+@media (max-width: 480px) {
+  .game-card {
+    padding: 18px;
+  }
+
+  .controls {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

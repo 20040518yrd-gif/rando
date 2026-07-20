@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>经典贪吃蛇</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game-card">
+      <header class="game-header">
+        <div>
+          <p class="eyebrow">CLASSIC SNAKE</p>
+          <h1>经典贪吃蛇</h1>
+        </div>
+        <p class="score">分数 <span id="score">0</span></p>
+      </header>
+
+      <canvas id="game-board" width="400" height="400" aria-label="贪吃蛇游戏区域"></canvas>
+
+      <div class="controls">
+        <button id="start-button" type="button">开始游戏</button>
+        <p id="status" aria-live="polite">点击开始游戏，然后使用方向键控制小蛇。</p>
+      </div>
+    </main>
+
+    <div id="game-over-dialog" class="game-over-dialog" role="dialog" aria-modal="true" aria-labelledby="game-over-title" hidden>
+      <section class="dialog-card">
+        <p class="dialog-eyebrow">GAME OVER</p>
+        <h2 id="game-over-title">游戏结束</h2>
+        <p id="game-over-reason" class="game-over-reason"></p>
+        <p class="final-score">本局得分 <span id="final-score">0</span></p>
+        <button id="restart-button" type="button">再来一次</button>
+      </section>
+    </div>
+
+    <script type="module" src="game.js"></script>
+  </body>
+</html>
